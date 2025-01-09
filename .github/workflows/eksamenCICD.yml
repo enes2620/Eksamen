@@ -1,0 +1,17 @@
+name: eksamenCICD
+
+on: 
+  push:
+    branches:
+      - main
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Simple test
+        run: echo "Det her en Falsk Test til at vise princippet på CI/CD"
